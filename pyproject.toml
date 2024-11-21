@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-httpfs"
+version = "0.4.12"
+authors = [
+  { name = "Peter Kerpedjiev", email = "pkerpedjiev@gmail.com" }
+]
+description = "A simple FUSE filesystem for reading http files"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10"
+]
+dependencies = [
+  "boto3",
+  "diskcache",
+  "fusepy",
+  "requests",
+  "slugid",
+  "tenacity"
+]
+
+license = {text = "MIT License"}
+[project.scripts]
+ simple-httpfs = "simple_httpfs.__main__:main"
+
+[project.urls]
+repositories = "https://github.com/higlass/simple-httpfs"
+
+[tool.setuptools]
+packages = ["simple_httpfs"]
+package-dir = {"" = "src"}
+include-package-data = true
