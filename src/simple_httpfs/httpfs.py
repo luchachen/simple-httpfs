@@ -16,7 +16,7 @@ import boto3
 import diskcache as dc
 import numpy as np
 import requests
-from fuse import FUSE, FuseOSError, LoggingMixIn, Operations
+from fusepy import FUSE, FuseOSError, LoggingMixIn, Operations
 from tenacity import (
     retry,
     stop_after_attempt,

@@ -3,7 +3,7 @@ import logging
 import os.path as op
 import sys
 
-from fuse import FUSE
+from fusepy import FUSE
 
 from .httpfs import HttpFs
 
